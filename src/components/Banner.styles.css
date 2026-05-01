@@ -9,17 +9,17 @@
   justify-content: space-between;
   padding: 0 2.5rem;
   height: 58px;
-  background: rgba(238, 244, 237, 0.92);
+  background: rgba(105, 137, 99, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(90, 120, 80, 0.15);
 }
 
 .banner-name {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: #2e2a22;
+  color: #161410;
   cursor: pointer;
   transition: opacity 0.2s;
 }
@@ -38,11 +38,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'DM Mono', monospace, sans-serif;
+  font-family: monospace, sans-serif;
   font-size: 0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #6b7c5e;
+  color: #161410;
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
   transition: color 0.2s, background 0.2s;
@@ -91,7 +91,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'DM Mono', monospace;
+  font-family: monospace, sans-serif;
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   color: #5a6b50;

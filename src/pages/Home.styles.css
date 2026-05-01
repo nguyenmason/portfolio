@@ -76,7 +76,7 @@ body {
 }
 
 .hero-name {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 400;
   line-height: 1.0;
@@ -86,7 +86,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'DM Mono', monospace;
+  font-family: monospace, sans-serif;
   font-size: clamp(0.8rem, 1.2vw, 1rem);
   font-weight: 300;
   letter-spacing: 0.14em;
@@ -204,7 +204,7 @@ body {
 }
 
 .card-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 1.25rem;
   font-weight: 600;
   color: #2e2a22;
@@ -212,7 +212,7 @@ body {
 }
 
 .card-cta {
-  font-family: 'DM Mono', monospace;
+  font-family: monospace, sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
