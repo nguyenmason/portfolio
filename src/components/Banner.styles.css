@@ -1,0 +1,109 @@
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 58px;
+  background: rgba(238, 244, 237, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(90, 120, 80, 0.15);
+}
+
+.banner-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #2e2a22;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.banner-name:hover {
+  opacity: 0.65;
+}
+
+.banner-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7c5e;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-btn:hover,
+.nav-btn.active {
+  color: #2e2a22;
+  background: rgba(90, 120, 80, 0.1);
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 160px;
+  background: #f5f2ea;
+  border: 1px solid rgba(90, 120, 80, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(60, 80, 50, 0.12);
+  animation: dropIn 0.15s ease;
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: #5a6b50;
+  padding: 0.65rem 1rem;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+  border-bottom: 1px solid rgba(90, 120, 80, 0.1);
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+.dropdown-item:hover {
+  background: rgba(90, 120, 80, 0.1);
+  color: #2e2a22;
+}
