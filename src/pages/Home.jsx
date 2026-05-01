@@ -1,16 +1,26 @@
 import { useState, useEffect } from "react";
 import Banner from "../components/Banner";
 import ProjectCard from "../components/ProjectCard";
+import Project from "./Project.jsx";
 import { PROJECTS } from "../data/projects";
 import "./Home.styles.css";
 
-export default function Home( ) {
+export default function Home() {
   const [page, setPage] = useState("home");
 
   const navigate = (page) => {
     setPage(page);
   }
   
+  if (page.startsWith("project-")) {
+    const projectId = Number(page.replace("project-", ""));
+    const project = PROJECTS.find((p) => p.id === projectId) || PROJECTS[0];
+
+    return (
+      <Project project={project} currentPage={page} onNavigate={navigate} />
+    );
+  }
+
   return (
     <>
       {/* ── banner ── */}
