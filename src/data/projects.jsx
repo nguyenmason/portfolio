@@ -2,6 +2,7 @@ export const PROJECTS = [
     {
         id: 1,
         title: "Raider Connect",
+        tag: "Web App",
         overview:"",
         problem: "",
         role: "",
@@ -12,6 +13,7 @@ export const PROJECTS = [
     {
         id: 2,
         title: "Embedded Kana Keyboard",
+        tag: "Hardware",
         overview:"",
         problem: "",
         role: "",
@@ -22,6 +24,7 @@ export const PROJECTS = [
     {
         id: 3,
         title: "Game Design Sprint",
+        tag: "Game Dev",
         overview:"",
         problem: "",
         role: "",
