@@ -41,7 +41,7 @@ export default function Banner({ currentPage = "home", onNavigate }) {
                     className="dropdown-item"
                     onClick={() => navigate(`project-${p.id}`)}
                   >
-                    {p.name}
+                    {p.title}
                   </button>
                 ))}
               </div>
