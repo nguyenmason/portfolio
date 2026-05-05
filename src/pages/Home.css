@@ -29,9 +29,22 @@ body {
   padding: 3rem;
 }
 
+.hero-photo {
+  position: absolute;
+  top: 20%;
+  left: -1%;
+  width: clamp(300px, 40vw, 525px);
+  height: clamp(300px, 40vw, 525px);
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
 .lens-wrap {
   position: relative;
-  width: clamp(200px, 28vw, 400px);
+  width: clamp(280px, 36vw, 500px);
   aspect-ratio: 1;
   opacity: 0;
   animation: fadeUp 0.8s ease 0.1s forwards;
@@ -152,75 +165,6 @@ body {
   flex: 1;
   height: 1px;
   background: rgba(90, 120, 80, 0.2);
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-/* ── project card ── */
-.project-card {
-  cursor: pointer;
-  border: 1px solid rgba(90, 120, 80, 0.2);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #faf7f2;
-  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-  opacity: 0;
-  animation: fadeUp 0.55s ease forwards;
-}
-.project-card:hover {
-  border-color: rgba(61, 92, 53, 0.45);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(90, 120, 80, 0.12);
-}
-
-.card-img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: #e8e8df;
-}
-.card-img svg {
-  width: 100%;
-  height: 100%;
-  stroke: rgba(90, 120, 80, 0.25);
-  stroke-width: 1px;
-}
-
-.card-body {
-  padding: 1rem 1.1rem 1.2rem;
-}
-
-.card-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8a9478;
-  display: block;
-  margin-bottom: 0.35rem;
-}
-
-.card-title {
-  font-family: Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2e2a22;
-  margin-bottom: 0.6rem;
-}
-
-.card-cta {
-  font-family: monospace, sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #7a8c6e;
-  transition: color 0.2s;
-}
-.project-card:hover .card-cta {
-  color: #3d5c35;
 }
 
 /* ── shared ── */

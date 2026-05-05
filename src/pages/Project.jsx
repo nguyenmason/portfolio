@@ -1,19 +1,8 @@
 import { useEffect } from "react";
 import Banner from "../components/Banner";
 import "./Project.css";
-
-// Default project data — swap out per project or pass via props
-const DEFAULT_PROJECT = {
-  id: 1,
-  title: "Raider Connect",
-  description:
-    "Raider Connect is a full-stack web platform designed to help students discover and connect with campus organizations, events, and opportunities. The app provides a unified hub for student life, replacing scattered bulletin boards and email chains with a clean, searchable interface.",
-  designRationale:
-    "The design prioritizes discoverability and simplicity. A card-based layout lets users scan content quickly, while a persistent search bar reduces friction for finding specific clubs or events. Color and typography were chosen to feel approachable without sacrificing readability on long browsing sessions.",
-  tech: ["React", "Node.js", "PostgreSQL", "Express", "Tailwind CSS"],
-  liveUrl: "https://example.com",
-  repoUrl: "https://github.com",
-};
+import { useNavigate, useParams } from "react-router";
+import { PROJECTS } from "../data/projects";
 
 function ImgPlaceholder({ className = "" }) {
   return (
@@ -37,26 +26,19 @@ function IconPlaceholder() {
   );
 }
 
-export default function Project({
-  project = DEFAULT_PROJECT,
-  onNavigate,
-  currentPage = "project-1",
-}) {
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel  = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&display=swap";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
+export default function Project() {
+  const navigate = useNavigate();
+  const projectId = useParams().id;
+  const project = PROJECTS[projectId - 1];
+  console.log("Rendering project page for project:", project.description);
 
   return (
     <div className="project-page">
-      <Banner currentPage={currentPage} onNavigate={onNavigate} />
+      <Banner currentPage="projects"/>
 
       <div className="project-container">
         {/* back to projects */}
-        <button className="back-link" onClick={() => onNavigate && onNavigate("home")}>
+        <button className="back-link" onClick={() => navigate("/")}>
           ← All Projects
         </button>
 
@@ -66,15 +48,14 @@ export default function Project({
 
           <div className="project-hero-copy">
             <div className="project-title-row">
-              <IconPlaceholder />
               <h1 className="project-title">{project.title}</h1>
             </div>
 
-            <p className="project-description">{project.description}</p>
+            <p className="project-description">{project.overview}</p>
 
-            {project.tech && (
+            {project.tools && (
               <ul className="tech-list">
-                {project.tech.map((t) => (
+                {project.tools.map((t) => (
                   <li key={t} className="tech-tag">{t}</li>
                 ))}
               </ul>
@@ -88,7 +69,7 @@ export default function Project({
 
           <div className="project-detail-copy">
             <h2 className="detail-heading">Design Rationale</h2>
-            <p className="detail-text">{project.designRationale}</p>
+            <p className="detail-text">{project.process}</p>
           </div>
         </div>
       </div>

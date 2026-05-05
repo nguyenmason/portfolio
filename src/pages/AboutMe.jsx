@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Banner from "../components/Banner";
 import "./AboutMe.css";
+import { useNavigate } from "react-router";
 
 const INTERESTS = [
   "Full-stack Development",
@@ -22,7 +23,8 @@ function PhotoPlaceholder() {
   );
 }
 
-export default function AboutMe({ onNavigate, currentPage = "about" }) {
+export default function AboutMe({ currentPage = "about" }) {
+  const navigate = useNavigate();
   useEffect(() => {
     const link = document.createElement("link");
     link.rel  = "stylesheet";
@@ -33,7 +35,7 @@ export default function AboutMe({ onNavigate, currentPage = "about" }) {
 
   return (
     <div className="about-page">
-      <Banner currentPage={currentPage} onNavigate={onNavigate} />
+      <Banner currentPage={currentPage} />
 
       <div className="about-container">
         {/* ── left: photo + resume ── */}

@@ -1,20 +1,16 @@
 import { useState } from "react";
-import "./Banner.styles.css";
+import "./Banner.css";
 import { PROJECTS } from "../data/projects";
+import { useNavigate } from "react-router";
 
-
-export default function Banner({ currentPage = "home", onNavigate }) {
+export default function Banner({ currentPage = "home" }) {
   const [projectsOpen, setProjectsOpen] = useState(false);
-
-  const navigate = (page) => {
-    setProjectsOpen(false);
-    if (onNavigate) onNavigate(page);
-  };
+  const navigate = useNavigate();
 
   return (
     <>
       <header className="banner">
-        <span className="banner-name" onClick={() => navigate("home")}>
+        <span className="banner-name" onClick={() => navigate("/")}>
           Mason Nguyen
         </span>
 
@@ -39,7 +35,7 @@ export default function Banner({ currentPage = "home", onNavigate }) {
                   <button
                     key={p.id}
                     className="dropdown-item"
-                    onClick={() => navigate(`project-${p.id}`)}
+                    onClick={() => navigate(`projects/${p.id}`)}
                   >
                     {p.title}
                   </button>
