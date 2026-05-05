@@ -4,12 +4,10 @@ import "./AboutMe.css";
 import { useNavigate } from "react-router";
 
 const INTERESTS = [
-  "Full-stack Development",
+  "Front-end Development",
   "UI / UX Design",
-  "Systems Programming",
-  "Open Source",
-  "Machine Learning",
-  "Photography",
+  "Embedded Systems",
+  "Environmental Sustainability",
 ];
 
 function PhotoPlaceholder() {
@@ -25,13 +23,6 @@ function PhotoPlaceholder() {
 
 export default function AboutMe({ currentPage = "about" }) {
   const navigate = useNavigate();
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel  = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&display=swap";
-    document.head.appendChild(link);
-    return () => document.head.removeChild(link);
-  }, []);
 
   return (
     <div className="about-page">
@@ -40,7 +31,7 @@ export default function AboutMe({ currentPage = "about" }) {
       <div className="about-container">
         {/* ── left: photo + resume ── */}
         <aside className="about-left">
-          <PhotoPlaceholder />
+          <img src={"/images/resume-1.png"} alt="Résumé" className="about-photo" />
           <a
             className="resume-link"
             href="/resume.pdf"
@@ -80,7 +71,7 @@ export default function AboutMe({ currentPage = "about" }) {
               <h2 className="section-heading">Interests</h2>
               <ul className="interests-list">
                 {INTERESTS.map((item) => (
-                  <li key={item} className="interest-tag">
+                  <li  key={item} className="interest-tag">
                     {item}
                   </li>
                 ))}

@@ -8,7 +8,7 @@ export default function ProjectCard({ project, index }) {
     <article
       className="project-card"
       style={{ animationDelay: `${0.55 + index * 0.1}s` }}
-      onClick={() => navigate(`projects/${project.id}`)}
+      onClick={() => navigate(`/projects/${project.id}`)}
     >
       <img
         src={`/images/${project.image}`}

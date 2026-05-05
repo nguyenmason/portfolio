@@ -4,54 +4,40 @@ import "./Project.css";
 import { useNavigate, useParams } from "react-router";
 import { PROJECTS } from "../data/projects";
 
-function ImgPlaceholder({ className = "" }) {
-  return (
-    <div className={`project-img ${className}`}>
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="0" y1="0" x2="100" y2="100" vectorEffect="non-scaling-stroke" />
-        <line x1="100" y1="0" x2="0" y2="100" vectorEffect="non-scaling-stroke" />
-      </svg>
-    </div>
-  );
-}
-
-function IconPlaceholder() {
-  return (
-    <div className="project-icon">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="0" y1="0" x2="100" y2="100" vectorEffect="non-scaling-stroke" />
-        <line x1="100" y1="0" x2="0" y2="100" vectorEffect="non-scaling-stroke" />
-      </svg>
-    </div>
-  );
-}
-
 export default function Project() {
   const navigate = useNavigate();
   const projectId = useParams().id;
   const project = PROJECTS[projectId - 1];
-  console.log("Rendering project page for project:", project.description);
 
   return (
     <div className="project-page">
-      <Banner currentPage="projects"/>
+      <Banner currentPage="projects" />
 
       <div className="project-container">
-        {/* back to projects */}
         <button className="back-link" onClick={() => navigate("/")}>
           ← All Projects
         </button>
 
-        {/* ── hero card: icon + title + description ── */}
-        <div className="project-hero-card">
-          <ImgPlaceholder className="hero-img" />
+        {/* ── header: image + title + meta ── */}
+        <div className="project-header-card">
 
-          <div className="project-hero-copy">
-            <div className="project-title-row">
-              <h1 className="project-title">{project.title}</h1>
+          <div className="project-header-copy">
+            <h1 className="project-title">{project.title}</h1>
+
+            <div className="project-meta">
+              <div className="meta-item">
+                <span className="meta-label">Type</span>
+                <span className="meta-value">{project.type}</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Timeline</span>
+                <span className="meta-value">{project.time}</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Role</span>
+                <span className="meta-value">{project.role}</span>
+              </div>
             </div>
-
-            <p className="project-description">{project.overview}</p>
 
             {project.tools && (
               <ul className="tech-list">
@@ -63,13 +49,39 @@ export default function Project() {
           </div>
         </div>
 
-        {/* ── detail card: secondary image + design rationale ── */}
-        <div className="project-detail-card">
-          <ImgPlaceholder className="secondary-img" />
+        {/* ── overview ── */}
+        <div className="project-section-card">
+          <h2 className="detail-heading">Project Overview</h2>
+          <p className="detail-text">{project.overview}</p>
+        </div>
 
-          <div className="project-detail-copy">
-            <h2 className="detail-heading">Design Rationale</h2>
-            <p className="detail-text">{project.process}</p>
+        {/* ── problem + role ── */}
+        <div className="project-split-row">
+          <div className="project-section-card">
+            <h2 className="detail-heading">The Problem</h2>
+            <p className="detail-text">{project.problem}</p>
+          </div>
+          <div className="project-section-card">
+            <h2 className="detail-heading">My Role</h2>
+            <p className="detail-text">{project.myRole}</p>
+          </div>
+        </div>
+
+        {/* ── process ── */}
+        <div className="project-section-card">
+          <h2 className="detail-heading">Process</h2>
+          <p className="detail-text">{project.process}</p>
+        </div>
+
+        {/* ── results + growth ── */}
+        <div className="project-split-row">
+          <div className="project-section-card">
+            <h2 className="detail-heading">Results</h2>
+            <p className="detail-text">{project.results}</p>
+          </div>
+          <div className="project-section-card">
+            <h2 className="detail-heading">What I Learned</h2>
+            <p className="detail-text">{project.growth}</p>
           </div>
         </div>
       </div>

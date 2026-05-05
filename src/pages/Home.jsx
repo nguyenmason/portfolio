@@ -7,7 +7,6 @@ import { useNavigate } from "react-router";
 
 export default function Home() {
   const [page, setPage] = useState("home");
-
   const navigate = useNavigate();
   
   return (
@@ -46,7 +45,6 @@ export default function Home() {
                 key={p.id}
                 project={p}
                 index={i}
-                navigate={navigate("projects/" + p.id)}
               />
             ))}
           </div>

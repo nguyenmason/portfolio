@@ -35,7 +35,7 @@ export default function Banner({ currentPage = "home" }) {
                   <button
                     key={p.id}
                     className="dropdown-item"
-                    onClick={() => navigate(`projects/${p.id}`)}
+                    onClick={() => navigate(`/projects/${p.id}`)}
                   >
                     {p.title}
                   </button>
@@ -46,7 +46,7 @@ export default function Banner({ currentPage = "home" }) {
 
           <button
             className={`nav-btn ${currentPage === "about" ? "active" : ""}`}
-            onClick={() => navigate("about")}
+            onClick={() => navigate("/about")}
           >
             About Me
           </button>

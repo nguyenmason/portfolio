@@ -121,6 +121,7 @@
 
 /* interests list */
 .interests-list {
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
