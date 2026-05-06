@@ -2,44 +2,27 @@ import { useEffect } from "react";
 import Banner from "../components/Banner";
 import "./AboutMe.css";
 import { useNavigate } from "react-router";
+import { GrLinkedin, GrMail } from "react-icons/gr";
 
 const INTERESTS = [
   "Front-end Development",
-  "UI / UX Design",
   "Embedded Systems",
+  "Web Development",
   "Environmental Sustainability",
+  "Rock Climbing",
 ];
 
-function PhotoPlaceholder() {
-  return (
-    <div className="about-photo">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="0" y1="0" x2="100" y2="100" vectorEffect="non-scaling-stroke" />
-        <line x1="100" y1="0" x2="0" y2="100" vectorEffect="non-scaling-stroke" />
-      </svg>
-    </div>
-  );
-}
-
-export default function AboutMe({ currentPage = "about" }) {
+export default function AboutMe() {
   const navigate = useNavigate();
 
   return (
     <div className="about-page">
-      <Banner currentPage={currentPage} />
+      <Banner currentPage={"about"} />
 
       <div className="about-container">
         {/* ── left: photo + resume ── */}
         <aside className="about-left">
           <img src={"/images/resume-1.png"} alt="Résumé" className="about-photo" />
-          <a
-            className="resume-link"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Download Résumé ↓
-          </a>
         </aside>
 
         {/* ── right: copy ── */}
@@ -52,16 +35,17 @@ export default function AboutMe({ currentPage = "about" }) {
               <h2 className="section-heading">Bio</h2>
               <div className="bio-text">
                 <p>
-                  Hi, I'm Mason Nguyen — a software engineer passionate about
-                  building thoughtful, user-centered products. I enjoy working
-                  across the stack, from designing clean interfaces to architecting
-                  reliable backend systems.
+                  Hi, I'm Mason Nguyen, a junior software engineer at the Milwaukee
+                  School of Engineering! I have a passion for creating easy and intuitive
+                  user experiences, and I enjoy working on projects that have a positive
+                  impact on people's lives.
                 </p>
                 <p>
-                  I'm currently studying Computer Science and am always looking for
-                  opportunities to collaborate on meaningful projects. When I'm not
-                  coding, you'll find me exploring the outdoors or tinkering with
-                  side projects.
+                  Beyond coding, I love rock climbing and have been climbing for 3-ish years now.
+                  I am a boulderer for life because the problems feel more puzzle-like than top 
+                  rope (and there's more dynos!). I'm also a big fan of Pokemon for its 
+                  complex battle mechanics and creature collecting. My favorite Pokemon has 
+                  to be Sinistcha becasue of its design and inspiration.
                 </p>
               </div>
             </section>
@@ -76,6 +60,19 @@ export default function AboutMe({ currentPage = "about" }) {
                   </li>
                 ))}
               </ul>
+            </section>
+
+            {/* Contact */}
+            <section className="about-section">
+              <h2 className="section-heading">Contact</h2>
+              <p>
+              </p>
+              <a className="contact-btn" href="https://www.linkedin.com/in/mason-nguyen-se/">
+                <GrLinkedin size={18} style={{ marginRight: 6 }} /> LinkedIn
+              </a>
+              <a className="contact-btn" href="mailto:masonnguyen1861@gmail.com">
+                <GrMail size={18} style={{ marginRight: 6 }} /> Email
+              </a>
             </section>
           </div>
         </main>
