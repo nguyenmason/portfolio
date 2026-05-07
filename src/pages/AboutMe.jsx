@@ -43,10 +43,10 @@ export default function AboutMe() {
               <h2 className="section-heading">Bio</h2>
               <div className="bio-text">
                 <p>
-                  Hi, I'm Mason Nguyen, a junior software engineer at the Milwaukee
-                  School of Engineering! I have a passion for creating easy and intuitive
-                  user experiences, and I enjoy working on projects that have a positive
-                  impact on people's lives.
+                  Hi, I'm Mason Nguyen, a junior software engineer minoring in computer
+                  engineering at the Milwaukee School of Engineering! I have a passion 
+                  for creating easy and intuitive user experiences, and I enjoy working 
+                  on projects that have a positive impact on people's lives.
                 </p>
                 <p>
                   Beyond coding, I love rock climbing and have been climbing for 3-ish years now.
