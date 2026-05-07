@@ -84,6 +84,21 @@ export default function Project() {
             <p className="detail-text">{project.growth}</p>
           </div>
         </div>
+
+        {/* ── gallery ── */}
+        <div className="project-section-card">
+          <h2 className="detail-heading">Gallery</h2>
+          <div className="gallery-grid">
+            {project.gallery?.map((img, i) => (
+              <img
+                key={i}
+                src={img.src}
+                alt={img.alt}
+                className="gallery-img"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

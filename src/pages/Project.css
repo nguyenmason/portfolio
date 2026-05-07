@@ -158,6 +158,34 @@
   color: #3e3830;
 }
 
+.project-section-card .detail-text p + p {
+  margin-top: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 cols internally */
+  gap: 1rem;
+}
+
+/* each item spans 2 of 6 cols = 3 per row */
+.gallery-grid > * {
+  grid-column: span 2;
+}
+
+/* last two span 3 of 6 cols each = 2 per row, centered */
+.gallery-grid > *:nth-child(4),
+.gallery-grid > *:nth-child(5) {
+  grid-column: span 3;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(60, 80, 50, 0.1);
+}
+
 /* ── animation ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }

@@ -11,7 +11,7 @@ export default function ProjectCard({ project, index }) {
       onClick={() => navigate(`/projects/${project.id}`)}
     >
       <img
-        src={`/images/${project.image}`}
+        src={`/images/cards/${project.image}`}
         alt={`${project.title} project screenshot`}
         className="card-img"
       />
