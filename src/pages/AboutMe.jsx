@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import "./AboutMe.css";
 import { useNavigate } from "react-router";
-import { GrLinkedin, GrMail } from "react-icons/gr";
+import { GrLinkedin, GrMail, GrGithub } from "react-icons/gr";
 
 const INTERESTS = [
   "Front-end Development",
@@ -81,10 +82,15 @@ export default function AboutMe() {
               <a className="contact-btn" href="mailto:masonnguyen1861@gmail.com">
                 <GrMail size={18} style={{ marginRight: 6 }} /> Email
               </a>
+              <a className="contact-btn" href="https://github.com/nguyenmason" target="_blank" rel="noreferrer">
+                <GrGithub size={18} style={{ marginRight: 6 }} /> GitHub
+              </a>
             </section>
           </div>
         </main>
       </div>
+
+      <Footer />
     </div>
   );
 }
