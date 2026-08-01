@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import "./Project.css";
 import { useNavigate, useParams } from "react-router";
 import { PROJECTS } from "../data/projects";
@@ -100,6 +101,7 @@ export default function Project() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

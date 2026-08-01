@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Banner from "../components/Banner";
 import ProjectCard from "../components/ProjectCard";
+import Footer from "../components/Footer";
 import { PROJECTS } from "../data/projects";
 import "./Home.css";
 import { useNavigate } from "react-router";
@@ -50,6 +51,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

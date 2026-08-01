@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 20px;
+    background-color:  rgba(105, 137, 99, 0.922);
+}
+
+.text {
+    font-family: 'DM Mono', monospace;
+    color: #161410;
+}
+
+.link-btn {
+    border: none !important;
+    background: transparent !important;
+    outline: none;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.linkIcon {
+    color: #161410;
+}
