@@ -7,7 +7,7 @@ import Resume from './pages/Resume.jsx';
 import { BrowserRouter, Route, Routes } from "react-router";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
+    <BrowserRouter basename='/portfolio'>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
