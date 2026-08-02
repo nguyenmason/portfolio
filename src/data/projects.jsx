@@ -15,11 +15,11 @@ export const PROJECTS = [
     results: "The Events tab shipped as a functioning feature within the app. The role-restricted event form ensured data integrity, and the daily/weekly navigation gave students a clear, structured way to browse upcoming campus activities. The feature was validated through team review and iterative sprint feedback.",
     growth: "This project strengthened my skills in full-stack development, database design, and agile team leadership. Serving as Scrum Master while actively developing forced me to balance coordination and execution — a skill I hadn't practiced at this scale before. I also gained hands-on experience connecting a typed frontend (TypeScript + Redux) to a hosted backend (Supabase) in a real, collaborative codebase.",
     gallery: [
-      { src: "/images/gallery/event-main-screen.jpg", alt: "Events feed UI showing a list of upcoming campus events with dates, times, and descriptions." },
-      { src: "/images/gallery/event-details.jpg", alt: "Event details screen showing full information about a specific event, including title, time, location, description, and host contact info." },
-      { src: "/images/gallery/event-form.jpg", alt:  "Event creation form with fields for event name, date/time, description, and a submit button."  },
-      {src: "/images/gallery/feature-tree.png", alt: "Feature tree showing the hierarchical structure of the Events feature and its subfeatures." },
-      { src: "/images/gallery/events-erd.png", alt: "ER diagram showing the database structure for the Events feature, including tables for events, users, and relationships between them." },
+      { src:"/portfolio/images/gallery/event-main-screen.jpg", alt: "Events feed UI showing a list of upcoming campus events with dates, times, and descriptions." },
+      { src:"/portfolio/images/gallery/event-details.jpg", alt: "Event details screen showing full information about a specific event, including title, time, location, description, and host contact info." },
+      { src:"/portfolio/images/gallery/event-form.jpg", alt:  "Event creation form with fields for event name, date/time, description, and a submit button."  },
+      {src:"/portfolio/images/gallery/feature-tree.png", alt: "Feature tree showing the hierarchical structure of the Events feature and its subfeatures." },
+      { src:"/portfolio/images/gallery/events-erd.png", alt: "ER diagram showing the database structure for the Events feature, including tables for events, users, and relationships between them." },
     ],
   },
   {
@@ -38,8 +38,8 @@ export const PROJECTS = [
     results: "The final system successfully emulated Japanese kana input on physical hardware. All character families were navigable via the rotary encoder, modifier keys correctly transformed applicable characters into their voiced variants, and typed text rendered accurately on the display. The keyboard handled backspace, punctuation, and confirmation with no input lag.",
     growth: "This project deepened my understanding of embedded C programming, hardware-software integration, and the complexity of encoding non-Latin scripts in constrained environments. Designing the modifier logic for dakuten and handakuten, which only apply to certain consonant rows, required careful conditional mapping that sharpened my low-level programming instincts. This project also marked the first time I implemented hardware components entirely without professor guidance, meaning I relied solely on datasheets and independent research to bridge the gap between specification and working code.",
     gallery: [
-      { src: "/images/gallery/kana-block-diagram.png", alt: "Block diagram of the Japanese kana keyboard architecture." },
-      { src: "/images/gallery/kana-flow-chart.png", alt: "Flow chart illustrating the input processing logic of the Japanese kana keyboard." },
+      { src:"/portfolio/images/gallery/kana-block-diagram.png", alt: "Block diagram of the Japanese kana keyboard architecture." },
+      { src:"/portfolio/images/gallery/kana-flow-chart.png", alt: "Flow chart illustrating the input processing logic of the Japanese kana keyboard." },
     ],
   },
   {
@@ -58,8 +58,8 @@ export const PROJECTS = [
   results: "The prototype effectively communicated the core feedback loop. Students could report issues, earn points, and activate power-ups in a way that felt purposeful and engaging rather than gimmicky. The gamified structure gave the concept a clear reason-to-return that a traditional feedback form wouldn't have.",
   growth: "This project strengthened my skills in user research, collaborative ideation, and designing engagement systems grounded in real needs. It also sharpened my ability to lead a team through ambiguity — translating interview findings into concrete design decisions and holding the vision together when opinions diverge.",
   gallery: [
-    {src: "/images/gallery/game-design-1.png", alt: "Figma Jam board showing ideation around gamified feedback concepts, including reward structures and engagement loops." },
-    {src: "/images/gallery/game-design-2.png", alt: "Figma prototype screens showing the gamified feedback app's core user flow, including issue reporting, point tracking, and power-up activation." },
+    {src:"/portfolio/images/gallery/game-design-1.png", alt: "Figma Jam board showing ideation around gamified feedback concepts, including reward structures and engagement loops." },
+    {src:"/portfolio/images/gallery/game-design-2.png", alt: "Figma prototype screens showing the gamified feedback app's core user flow, including issue reporting, point tracking, and power-up activation." },
   ]
 },
 ];
