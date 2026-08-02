@@ -20,7 +20,7 @@ export default function Home() {
         <section className="hero">
           {/* left — photo  */}
           <div className="photo-container">
-            <img src={"/images/me-photo.jpg"} alt="Photo of me" className="hero-photo" />
+            <img src={"/portfolio/images/me-photo.jpg"} alt="Photo of me" className="hero-photo" />
             <div className="hero-graphic-overlay" />
           </div>
 
